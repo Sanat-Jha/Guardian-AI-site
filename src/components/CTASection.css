@@ -1,0 +1,145 @@
+.cta-section {
+  min-height: 60vh;
+  background: linear-gradient(135deg, #0F1B2A 0%, #162333 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Grid Overlay */
+.cta-section .grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle, rgba(35, 210, 226, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Floating Particles */
+.cta-section .particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #23D2E2;
+  border-radius: 50%;
+  animation: floatParticle 8s infinite ease-in-out;
+  opacity: 0.4;
+}
+
+@keyframes floatParticle {
+  0%, 100% { 
+    transform: translateY(0) translateX(0); 
+    opacity: 0.3; 
+  }
+  50% { 
+    transform: translateY(-50px) translateX(15px); 
+    opacity: 0.6; 
+  }
+}
+
+.cta-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.cta-main-button {
+  position: relative;
+  background: linear-gradient(135deg, #23D2E2, #18A4B4);
+  color: #0F1B2A;
+  border: none;
+  padding: 24px 56px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 40px rgba(35, 210, 226, 0.3);
+  animation: fadeInScale 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.cta-main-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #18A4B4, #23D2E2);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cta-main-button:hover::before {
+  opacity: 1;
+}
+
+.cta-main-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 50px rgba(35, 210, 226, 0.5);
+}
+
+.cta-button-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 0.5px;
+}
+
+.cta-button-text svg {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-main-button:hover .cta-button-text svg {
+  transform: translateX(6px);
+}
+
+.cta-main-button:active {
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 80px 20px;
+    min-height: 50vh;
+  }
+
+  .cta-main-button {
+    padding: 20px 40px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+  }
+}
