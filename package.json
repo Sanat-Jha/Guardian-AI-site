@@ -1,6 +1,6 @@
 {
   "name": "guardianai-hero",
-  "homepage": "https://amishar-jpg.github.io/guardianai",
+  "homepage": "https://Sanat-Jha.github.io/Guardian-AI-site",
   "version": "1.0.0",
   "description": "Guardian AI Hero Section",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
