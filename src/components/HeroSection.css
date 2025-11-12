@@ -527,6 +527,45 @@ section {
   animation: slideUpFade 0.8s ease-out 0.4s both;
 }
 
+.headline-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.headline-word {
+  font-size: 64px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -1px !important;
+  width: 100%;
+}
+
+.headline-word h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.headline-wrapper > div > div:nth-child(1) {
+  animation: slideUpFade 0.8s ease-out 0.3s both;
+}
+
+.headline-wrapper > div > div:nth-child(2) {
+  animation: slideUpFade 0.8s ease-out 0.5s both;
+}
+
+.headline-wrapper > div > div:nth-child(3) {
+  animation: slideUpFade 0.8s ease-out 0.7s both;
+}
+
+.headline-subtext {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+  animation: slideUpFade 0.8s ease-out 0.5s both;
+}
+
 .headline-highlight {
   display: block;
   font-size: 20px;

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './HeroSection.css';
 import CardSwap, { Card } from './CardSwap';
+import TextPressure from './TextPressure';
+import Threads from './Threads';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,7 +53,24 @@ const HeroSection = () => {
   }, [isHoverDialogOpen]);
 
   return (
-    <div className={`hero-container ${isHoverDialogOpen ? 'dialog-active' : ''}`}>
+    <div className={`hero-container ${isHoverDialogOpen ? 'dialog-active' : ''}`} style={{ position: 'relative', overflow: 'hidden' }}>
+      {/* Animated Threads Background */}
+      <Threads 
+        color={[0.14, 0.82, 0.89]} 
+        amplitude={1.2} 
+        distance={0.7} 
+        enableMouseInteraction={true} 
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
+          pointerEvents: 'none', // allow interaction with content above
+        }}
+      />
+      
       {/* Hover Dialog Backdrop Blur */}
       {isHoverDialogOpen && <div className="hover-dialog-backdrop" />}
       
@@ -127,11 +146,71 @@ const HeroSection = () => {
             className={`hero-left ${isVisible ? 'visible' : ''}`}
           >
             <div className="content-wrapper">
-              <span className="hero-label">[HOME]</span>
-              <h1 className="headline">
-                Empowering digital childhood and guarding humanity's future
+              <div className="headline-wrapper" style={{ marginBottom: '2rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                  <div style={{ height: '70px', display: 'flex', alignItems: 'center' }}>
+                    <TextPressure 
+                      text="EMPOWERING"
+                      fontFamily="'Quicksand', sans-serif"
+                      fontUrl=""
+                      textColor="#FFFFFF"
+                      width={true}
+                      weight={true}
+                      italic={false}
+                      alpha={false}
+                      flex={false}
+                      stroke={false}
+                      scale={false}
+                      minFontSize={48}
+                      className="headline-word"
+                    />
+                  </div>
+                  <div style={{ height: '70px', display: 'flex', alignItems: 'center' }}>
+                    <TextPressure 
+                      text="DIGITAL"
+                      fontFamily="'Quicksand', sans-serif"
+                      fontUrl=""
+                      textColor="#23D2E2"
+                      width={true}
+                      weight={true}
+                      italic={false}
+                      alpha={false}
+                      flex={false}
+                      stroke={false}
+                      scale={false}
+                      minFontSize={48}
+                      className="headline-word"
+                    />
+                  </div>
+                  <div style={{ height: '70px', display: 'flex', alignItems: 'center' }}>
+                    <TextPressure 
+                      text="CHILDHOOD"
+                      fontFamily="'Quicksand', sans-serif"
+                      fontUrl=""
+                      textColor="#FFFFFF"
+                      width={true}
+                      weight={true}
+                      italic={false}
+                      alpha={false}
+                      flex={false}
+                      stroke={false}
+                      scale={false}
+                      minFontSize={48}
+                      className="headline-word"
+                    />
+                  </div>
+                </div>
+              </div>
+              <h2 className="headline-subtext">
+                Guarding humanity's future
                 <span className="headline-highlight"> — one child at a time.</span>
-              </h1>
+              </h2>
+              
+              {/* Threads Effect - Below Headline */}
+              {/* <div style={{ display: 'flex', justifyContent: 'center', margin: '32px 0' }}>
+                <Threads color={[0.14, 0.82, 0.89]} amplitude={1.2} distance={0.7} enableMouseInteraction={true} style={{ width: 400, height: 300 }} />
+              </div> */}
+
               <div className="hero-buttons-group">
                 <button className="why-button" onClick={() => {
                   setIsModalOpen(true);
