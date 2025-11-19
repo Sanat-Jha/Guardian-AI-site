@@ -1,6 +1,6 @@
 /* About Section */
 .about-section {
-  background: linear-gradient(135deg, #0F1B2A 0%, #162333 100%);
+  background: #0a0b14;
   color: #FFFFFF;
   padding: 120px 20px;
   position: relative;
@@ -13,8 +13,8 @@
 /* Grid Overlay */
 .about-section .grid-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  background: #000000; /* Changed to dark black */
+  color: #FFFFFF; /* Ensured text is white */
   right: 0;
   bottom: 0;
   background-image: 
@@ -39,39 +39,13 @@
   height: 2px;
   background: #23D2E2;
   border-radius: 50%;
-  opacity: 0.4;
-  animation: floatParticle 8s infinite ease-in-out;
-}
-
-@keyframes floatParticle {
-  0%, 100% { 
-    transform: translateY(0) translateX(0); 
-    opacity: 0.3; 
-  }
-  50% { 
-    transform: translateY(-50px) translateX(15px); 
-    opacity: 0.6; 
-  }
-}
-
-.about-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  padding: 0 40px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.section-label {
-  display: inline-block;
+/* Removed particle effect */
   color: #23D2E2;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.2em;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  color: #FFFFFF; /* Changed to white */
   opacity: 0.9;
 }
 

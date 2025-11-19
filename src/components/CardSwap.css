@@ -14,7 +14,7 @@
   top: 50%;
   left: 50%;
   border-radius: 12px;
-  background: linear-gradient(135deg, #0a0b14 0%, #151621 100%);
+  background: #0a0b14;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transform-style: preserve-3d;
   will-change: transform, opacity;

@@ -1,6 +1,6 @@
 .cta-section {
   min-height: 60vh;
-  background: linear-gradient(135deg, #0F1B2A 0%, #162333 100%);
+  background: #000000;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -10,6 +10,7 @@
   opacity: 0;
   transform: translateY(60px);
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #fff;
 }
 
 .cta-section.visible {
@@ -18,40 +19,10 @@
 }
 
 /* Grid Overlay */
-.cta-section .grid-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle, rgba(35, 210, 226, 0.08) 1px, transparent 1px);
-  background-size: 30px 30px;
-  opacity: 0.4;
-  pointer-events: none;
-}
+
 
 /* Floating Particles */
-.cta-section .particle {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: #23D2E2;
-  border-radius: 50%;
-  animation: floatParticle 8s infinite ease-in-out;
-  opacity: 0.4;
-}
 
-@keyframes floatParticle {
-  0%, 100% { 
-    transform: translateY(0) translateX(0); 
-    opacity: 0.3; 
-  }
-  50% { 
-    transform: translateY(-50px) translateX(15px); 
-    opacity: 0.6; 
-  }
-}
 
 .cta-container {
   position: relative;
