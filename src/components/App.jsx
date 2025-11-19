@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ProductSection from './ProductSection';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <HeroSection />
       <AboutSection />
       <ProductSection />
+      <Footer />
     </div>
   );
 }

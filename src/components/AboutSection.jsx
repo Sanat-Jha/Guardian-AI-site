@@ -1,5 +1,8 @@
+
 import React, { useEffect, useRef, useState } from 'react';
-import Orb from './Orb';
+import { Layers } from "lucide-react";
+import { motion } from "framer-motion";
+
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -50,10 +53,6 @@ const AboutSection = () => {
   return (
     <section id="about" className="about-section" style={{ position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-        {/* Orb Animated Background */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
-          <Orb hoverIntensity={0.4} rotateOnHover={false} hue={270} forceHoverState={true} />
-        </div>
 
         {/* Grid Overlay */}
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0, zIndex: 1 }}></div>
@@ -95,10 +94,7 @@ const AboutSection = () => {
           <div className={`mission-vision-grid ${cardsVisible ? 'visible' : ''}`} ref={cardsRef}>
             <div className="mv-card mission-card">
               <div className="card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
+                <Layers size={40} />
               </div>
               <div className="mv-card-content">
                 <h3>Mission</h3>
@@ -108,7 +104,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="mv-card vision-card">
+            <div className="mv-card mission-card vision-card">
               <div className="card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="12" cy="12" r="10"/>
